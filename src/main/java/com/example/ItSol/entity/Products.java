@@ -8,19 +8,26 @@ public class Products {
     @Id
     @GeneratedValue
     private int id_product;
+
     @ManyToOne
     @JoinColumn(name = "id_category")
-    private int id_category;
+    private Categories id_category;
+
     @Column
     private String name_product;
+
     @Column
     private int price;
+
     @Column
     private int quantity;
+
     @Column
     private boolean status_product;
+
     @Column
     private String describe_product;
+
     @Column
     private String picture;
 
@@ -36,11 +43,11 @@ public class Products {
         this.id_product = id_product;
     }
 
-    public int getId_category() {
+    public Categories getId_category() {
         return id_category;
     }
 
-    public void setId_category(int id_category) {
+    public void setId_category(Categories id_category) {
         this.id_category = id_category;
     }
 
